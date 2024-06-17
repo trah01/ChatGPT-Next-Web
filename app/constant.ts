@@ -8,11 +8,11 @@ export const FETCH_COMMIT_URL = `https://api.github.com/repos/${OWNER}/${REPO}/c
 export const FETCH_TAG_URL = `https://api.github.com/repos/${OWNER}/${REPO}/tags?per_page=1`;
 export const RUNTIME_CONFIG_DOM = "danger-runtime-config";
 
-export const DEFAULT_API_HOST = "https://api.nextchat.dev";
-export const OPENAI_BASE_URL = "https://api.openai.com";
-export const ANTHROPIC_BASE_URL = "https://api.anthropic.com";
+export const DEFAULT_API_HOST = "https://api.theb.ai";
+export const OPENAI_BASE_URL = "https://api.theb.ai";
+export const ANTHROPIC_BASE_URL = "https://api.theb.ai";
 
-export const GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/";
+export const GEMINI_BASE_URL = "https://api.theb.ai/";
 
 export enum Path {
   Home = "/",
@@ -126,7 +126,6 @@ export const KnowledgeCutOffDate: Record<string, string> = {
   default: "2021-09",
   "gpt-4-turbo": "2023-12",
   "gpt-4-turbo-2024-04-09": "2023-12",
-  "gpt-4-turbo-preview": "2023-12",
   "gpt-4o": "2023-10",
   "gpt-4o-2024-05-13": "2023-10",
   "gpt-4-vision-preview": "2023-04",
@@ -137,35 +136,44 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 };
 
 const openaiModels = [
-  "gpt-3.5-turbo",
-  "gpt-3.5-turbo-1106",
-  "gpt-3.5-turbo-0125",
-  "gpt-4",
-  "gpt-4-0613",
-  "gpt-4-32k",
-  "gpt-4-32k-0613",
-  "gpt-4-turbo",
-  "gpt-4-turbo-preview",
-  "gpt-4o",
-  "gpt-4o-2024-05-13",
-  "gpt-4-vision-preview",
-  "gpt-4-turbo-2024-04-09",
+	"theb-ai",
+	"gpt-3.5-turbo",
+	"gpt-4-turbo",
+	"gpt-4o",
+	"gpt-4",
+	"llama-3-8b-chat",
+	"llama-3-70b-chat",
+	"mistral-7b",
+	"mixtral-8x7b",
+	"mixtral-8x22b",
+	"wizardlm-2-8x22b",
+	"dbrx-instruct",
+	"yi-34b",
+	"qwen-1.5-7b",
+	"qwen-1.5-14b",
+	"qwen-1.5-32b",
+	"qwen-1.5-72b",
+	"qwen-1.5-110b",
+	"llama-2-7b-chat",
+	"llama-2-13b-chat",
+	"llama-2-70b-chat",
+	"code-llama-7b",
+	"code-llama-13b",
+	"code-llama-34b",
+	"code-llama-70b",
 ];
 
 const googleModels = [
-  "gemini-1.0-pro",
-  "gemini-1.5-pro-latest",
-  "gemini-1.5-flash-latest",
-  "gemini-pro-vision",
+	"gemini-1.0-pro",
+	"gemini-1.5-pro",
 ];
 
 const anthropicModels = [
-  "claude-instant-1.2",
-  "claude-2.0",
-  "claude-2.1",
-  "claude-3-sonnet-20240229",
-  "claude-3-opus-20240229",
-  "claude-3-haiku-20240307",
+	"claude-3-haiku",
+	"claude-3-sonnet",
+	"claude-3-opus",
+	"claude-2",
+	"claude-instant-1",
 ];
 
 export const DEFAULT_MODELS = [
@@ -204,12 +212,4 @@ export const MAX_RENDER_MSG_COUNT = 45;
 // some famous webdav endpoints
 export const internalAllowedWebDavEndpoints = [
   "https://dav.jianguoyun.com/dav/",
-  "https://dav.dropdav.com/",
-  "https://dav.box.com/dav",
-  "https://nanao.teracloud.jp/dav/",
-  "https://bora.teracloud.jp/dav/",
-  "https://webdav.4shared.com/",
-  "https://dav.idrivesync.com",
-  "https://webdav.yandex.com",
-  "https://app.koofr.net/dav/Koofr",
 ];
